@@ -92,6 +92,9 @@
     }
   }
 }
+.hide {
+  display: none;
+}
 .curvy {
   width: 100%;
   height: 40%;
@@ -148,6 +151,7 @@
   padding: 40px 70px;
   background-color: hsl(218, 28%, 13%);
   display: flex;
+  justify-content: center;
   gap: 60px;
   > .productive-left {
     max-width: 600px;
@@ -220,23 +224,23 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-  z-index: -1;
-  .quote {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: 9.3%;
-    z-index: 0;
-  }
   .userCard {
     margin-top: 30px;
-    z-index: 1;
+    z-index: 1000;
     background-color: hsl(219, 30%, 18%);
     padding: 30px 20px;
     width: 350px;
     display: flex;
     flex-direction: column;
     border-radius: 2px;
+    > .quote {
+      width: 35px;
+      height: 30px;
+      position: absolute;
+      top: -30px;
+      left: 0px;
+      z-index: -100000;
+    }
     > p {
       color: #fff;
       font-size: 14px;
@@ -273,6 +277,7 @@
     }
     &:first-child {
       position: relative;
+      z-index: 1000;
     }
   }
 }
@@ -439,6 +444,474 @@
             &:hover {
               color: hsl(198, 60%, 50%);
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .navbar {
+    padding: 0 30px;
+    width: 100%;
+    height: 100px;
+    background-color: hsl(217, 28%, 15%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > .left {
+      > img {
+        height: 30px;
+        width: 100px;
+      }
+    }
+  }
+  .intro {
+    padding: 0;
+    padding-bottom: 210px;
+    > .introImage {
+      > img {
+        margin-bottom: 25px;
+        max-width: 500px;
+        z-index: 1;
+      }
+    }
+    > h1 {
+      margin-bottom: 10px;
+      > .top {
+        margin-top: -5px;
+      }
+    }
+    .top {
+      margin-top: 20px;
+    }
+    > p {
+      margin-bottom: 2px;
+    }
+    > .btnIntro {
+      margin-top: 30px;
+      width: 220px;
+      height: 48px;
+    }
+  }
+  .cards {
+    margin-top: -200px;
+    > .row {
+      margin-bottom: 60px;
+      gap: 50px;
+      z-index: 1;
+      > .card {
+        max-width: 375px;
+        > img {
+          height: 60px;
+          margin-bottom: 18px;
+        }
+        > h4 {
+          margin-bottom: 8px;
+        }
+        > p {
+          width: 300px;
+          font-size: 12px;
+        }
+      }
+      .first {
+        max-width: 355px;
+      }
+      .second {
+        max-width: 380px;
+      }
+      &:first-child {
+        padding-top: 90px;
+      }
+    }
+  }
+  .productive {
+    padding: 25px 30px;
+    gap: 30px;
+    > .productive-left {
+      max-width: 600px;
+      > img {
+        width: 100%;
+      }
+    }
+    > .productive-right {
+      > h3 {
+        width: 250px;
+        margin-bottom: 10px;
+        font-size: 26px;
+      }
+      > p {
+        width: 350px;
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+      > a {
+        font-size: 13px;
+      }
+    }
+  }
+  .userCards {
+    padding-top: 30px;
+    padding-bottom: 180px;
+    gap: 20px;
+    .userCard {
+      margin-top: 30px;
+      padding: 25px 15px;
+      width: 350px;
+      > p {
+        font-size: 12px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .subscribe {
+    .cardSubs {
+      background-color: hsl(219, 30%, 18%);
+      width: 500px;
+      height: 220px;
+
+      top: -120px;
+      border-radius: 10px;
+
+      > h5 {
+        font-size: 26px;
+      }
+      > p {
+        font-size: 12px;
+        width: 300px;
+      }
+      > .inputBtn {
+        > input {
+          width: 250px;
+        }
+        > button {
+          cursor: pointer;
+          width: 170px;
+        }
+      }
+    }
+  }
+  .footer {
+    background-color: hsl(216, 53%, 9%);
+    height: 350px;
+    padding-top: 150px;
+    padding-left: 30px;
+    padding-right: 30px;
+    > .footerTop {
+      > img {
+        width: 120px;
+        margin-bottom: 20px;
+      }
+    }
+    .footerBottom {
+      > .bottomFirst {
+        > img {
+          width: 13px;
+          height: 13px;
+        }
+        > p {
+          width: 200px;
+          font-size: 12px;
+        }
+      }
+      .fr {
+        margin-top: -5px;
+      }
+      > .bottomSecond {
+        .icon {
+          gap: 5px;
+
+          > img {
+            color: #fff;
+            margin-right: 8px;
+            margin-top: 8px;
+            width: 15px;
+            height: 13px;
+          }
+          > p {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 7px;
+            font-family: "Open Sans", sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 710px) {
+  .navbar {
+    padding: 0 20px;
+    width: 100%;
+    height: 80px;
+    > .left {
+      > img {
+        height: 25px;
+        width: 70px;
+      }
+    }
+    > .right {
+      gap: 15px;
+      > a {
+        font-size: 10px;
+      }
+    }
+  }
+  .intro {
+    padding: 50px 0;
+    padding-bottom: 0px;
+    > .introImage {
+      > img {
+        margin-bottom: 25px;
+        max-width: 300px;
+      }
+    }
+    > h1 {
+      width: 250px;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 0px;
+      line-height: 1.4;
+      > .top {
+        margin-top: -5px;
+      }
+    }
+    .top {
+      margin-top: 20px;
+    }
+    > p {
+      margin-bottom: 2px;
+      text-align: center;
+    }
+    > .btnIntro {
+      cursor: pointer;
+      margin-top: 30px;
+      color: #fff;
+      width: 220px;
+      height: 48px;
+      border: none;
+    }
+  }
+  .cards {
+    flex-direction: column;
+    margin-top: 0;
+    > p {
+      text-align: center;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 2px;
+      z-index: 1;
+    }
+    > .btnIntro {
+      cursor: pointer;
+      margin-top: 30px;
+      color: #fff;
+      width: 220px;
+      height: 48px;
+      border: none;
+      z-index: 1;
+      border-radius: 50px;
+      background-color: hsl(198, 60%, 50%);
+      transition: 0.5s;
+      margin-bottom: 100px;
+      &:hover {
+        background-color: hsl(176, 68%, 64%);
+      }
+    }
+    > .row {
+      margin-bottom: 60px;
+      flex-direction: column;
+      gap: 50px;
+      z-index: 1;
+      > .card {
+        max-width: 375px;
+        > img {
+          height: 60px;
+          margin-bottom: 18px;
+        }
+        > h4 {
+          margin-bottom: 8px;
+        }
+        > p {
+          width: 300px;
+          font-size: 12px;
+        }
+      }
+      .first {
+        max-width: 355px;
+      }
+      .second {
+        max-width: 380px;
+      }
+      &:first-child {
+        padding-top: 90px;
+      }
+    }
+  }
+  .curv {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+  }
+  .hidden {
+    display: none;
+  }
+  .hide {
+    display: initial;
+  }
+  .productive {
+    padding: 25px 30px;
+    padding-top: 60px;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    > .productive-left {
+      max-width: 600px;
+      > img {
+        width: 100%;
+      }
+    }
+    > .productive-right {
+      > h3 {
+        width: 250px;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+      > p {
+        width: 250px;
+        font-size: 11px;
+        margin-bottom: 8px;
+      }
+      > a {
+        font-size: 11px;
+      }
+    }
+  }
+  .userCards {
+    padding-top: 100px;
+    padding-bottom: 240px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    .userCard {
+      margin-top: 30px;
+      padding: 25px 15px;
+      width: 250px;
+      > p {
+        font-size: 10px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  .subscribe {
+    .cardSubs {
+      background-color: hsl(219, 30%, 18%);
+      width: 300px;
+      height: 280px;
+      top: -120px;
+      border-radius: 10px;
+      > h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      > p {
+        font-size: 12px;
+        width: 240px;
+        margin-bottom: 20px;
+      }
+      > .inputBtn {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        > input {
+          width: 100%;
+          margin-left: 0;
+          margin-right: 0;
+        }
+        > button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .footer {
+    background-color: hsl(216, 53%, 9%);
+    height: 900px;
+    padding-top: 230px;
+    padding-left: 30px;
+    padding-right: 30px;
+    > .footerTop {
+      > img {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+    }
+    .footerBottom {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      > .bottomFirst {
+        > img {
+          width: 20px;
+          height: 18px;
+        }
+        > p {
+          width: 260px;
+          font-size: 16px;
+        }
+      }
+      .fr {
+        margin-top: 0px;
+      }
+      > .bottomSecond {
+        .icon {
+          gap: 5px;
+          > img {
+            color: #fff;
+            margin-right: 10px;
+            margin-top: 8px;
+            width: 20px;
+            height: 18px;
+          }
+          > p {
+            color: #fff;
+            font-size: 16px;
+            font-weight: 400;
+            margin-top: 7px;
+            font-family: "Open Sans", sans-serif;
+          }
+        }
+      }
+      > .bottomThird {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        .fr {
+          margin-top: 0px;
+        }
+        > a {
+          font-size: 16px;
+        }
+      }
+      .icons {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        > a {
+          text-decoration: none;
+          > .iconCircle {
+            cursor: pointer;
+            width: 22px;
+            height: 22px;
+            padding: 13px;
           }
         }
       }
