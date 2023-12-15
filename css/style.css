@@ -879,13 +879,13 @@
             align-items: center;
   }
   .productive > .productive-left {
-    max-width: 600px;
+    max-width: 300px;
   }
   .productive > .productive-left > img {
     width: 100%;
   }
   .productive > .productive-right {
-    max-width: 500px;
+    max-width: 300px;
   }
   .productive > .productive-right > h3 {
     width: 100%;
