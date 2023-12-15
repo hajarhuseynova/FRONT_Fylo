@@ -695,9 +695,11 @@
     }
   }
   .cards {
+    padding-top: 10px;
     flex-direction: column;
     margin-top: 0;
     > p {
+      max-width: 350px;
       text-align: center;
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
@@ -756,7 +758,7 @@
     height: 40%;
     position: absolute;
     z-index: 0;
-    bottom: 0;
+    bottom: -1px;
   }
   .hidden {
     display: none;
@@ -777,13 +779,15 @@
       }
     }
     > .productive-right {
+      max-width: 500px;
       > h3 {
-        width: 250px;
+        width: 100%;
         margin-bottom: 10px;
         font-size: 14px;
       }
       > p {
-        width: 250px;
+        width: 100%;
+
         font-size: 11px;
         margin-bottom: 8px;
       }
@@ -844,9 +848,11 @@
   .footer {
     background-color: hsl(216, 53%, 9%);
     height: 900px;
+
     padding-top: 230px;
     padding-left: 30px;
     padding-right: 30px;
+
     > .footerTop {
       > img {
         width: 150px;
