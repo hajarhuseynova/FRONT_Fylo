@@ -563,6 +563,34 @@
   color: hsl(198, 60%, 50%);
 }
 
+.wrong {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.wrong > p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 100%, 63%);
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.true {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+.true > p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: green;
+  margin-bottom: 2px;
+  font-size: 14px;
+}
+
+.secure {
+  display: none;
+}
+
 @media screen and (max-width: 1040px) {
   .navbar {
     padding: 0 30px;
@@ -1044,5 +1072,11 @@
     width: 22px;
     height: 22px;
     padding: 13px;
+  }
+  .wrong {
+    padding-left: 0px;
+  }
+  .true {
+    padding-left: 0px;
   }
 }
